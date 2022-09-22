@@ -1,4 +1,4 @@
-module ManifestController
+module github.com/Dana-Team/ManifestController
 
 go 1.16
 
