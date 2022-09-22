@@ -14,7 +14,9 @@ var FlagChannel = "./channels"
 
 func init() {
 	// TODO: Yuk - global flags are ugly
-	flag.StringVar(&FlagChannel, "channel", FlagChannel, "location of channel to use")
+	if flag.Lookup("channel") == nil {
+		flag.StringVar(&FlagChannel, "channel", FlagChannel, "location of channel to use")
+	}
 }
 
 type ManifestLoader struct {
